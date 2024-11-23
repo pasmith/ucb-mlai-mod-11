@@ -98,4 +98,7 @@ def plot_features(df, features: list[str], color='cluster'):
       for trace in range(len(figure["data"])):
           fig.append_trace(figure["data"][trace], row=1, col=i+1)
 
+  fig.update_layout(title_text=f'Relationship of various features to Price')
+
+  # fig.write_image(f'images/{'_'.join(features)}-price.png')
   fig.show()
